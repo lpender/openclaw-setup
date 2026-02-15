@@ -1,21 +1,43 @@
-Install direnv
+# Batteries included OpenClaw Docker setup
+
+Opinionated batteries-included OpenClaw Docker setup. Uses coollabsio docker
+compose with browser sidecar.
+
+- OpenClaw
+- Browser sidecar
+- Anthropic
+- Grok
+- Telegram
+
+## Setup
+
+### Pull docker-compose with browser
+
+```bash
+curl -sLO https://raw.githubusercontent.com/coollabsio/openclaw/main/docker-compose.yml
+```
+
+### Install direnv
+
 ```
 brew install direnv
 ```
 
 Populate your `.envrc` file
 
-Get your anthropic key:
+### Get your anthropic key:
 
 ```
 claude setup-token
 ```
 
-Get your telegram bot token
+Paste it into `.envrc`
+
+### Get your telegram bot token
 
 (Text @BotFather)
 
-Generate a password
+### Generate a password
 
 ```
 echo "AUTH_PASSWORD=$(openssl rand -base64 24)" >> .envrc
@@ -30,9 +52,9 @@ echo "OPENCLAW_GATEWAY_TOKEN=$(openssl rand -base64 32)" >> .envrc
 Add to the `.envrc` file:
 
 ```
-ANTHROPIC_API_KEY=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
-AUTH_PASSWORD=yE18smnFRac9DH2aCKTv5nFSXP3GotJW
-TELEGRAM_BOT_TOKEN=7666866950:AAEviISj_ikpVZ-Oiwh-OCbu5nhumtX4dKI
+ANTHROPIC_API_KEY=
+AUTH_PASSWORD=
+TELEGRAM_BOT_TOKEN=
 ```
 
 Allow it
