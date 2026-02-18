@@ -1,0 +1,7 @@
+version: '3'
+
+tasks:
+  doctor:
+    desc: Run OpenClaw doctor diagnostics
+    cmds:
+      - docker compose exec openclaw openclaw doctor
